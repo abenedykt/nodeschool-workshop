@@ -1,0 +1,72 @@
+    1  git init
+    2  touch .gitignore
+    3  git status
+    4  git add. 
+    5  git add .
+    6  git commit
+    7  git  status
+    8  npm init
+    9  git status
+   10  git add --all
+   11  git commit
+   12  git status
+   13  git log
+   14  git log --prety-line
+   15  git log --pretty=line
+   16  ls
+   17  mkdir test
+   18  touch test/drones_spec.js
+   19  dir
+   20  ls
+   21  npm install mocha
+   22  npm install mocha --save-dev
+   23  ./node_modules/.bin/mocha 
+   24  npm install chai --save-dev
+   25  ./node_modules/.bin/mocha 
+   26  git status
+   27  git add --all
+   28  git commit
+   29  git status
+   30  git log
+   31  git stat
+   32  git stats
+   33  git status
+   34  npm test
+   35  git remote add origin https://github.com/abenedykt/nodeschool-workshop.git
+   36  git push origin master
+   37  npm test
+   38  npm install supertest --save-dev
+   39  npm test
+   40  touch index.js
+   41  npm test
+   42  npm install koa --save
+   43  npm test
+   44  nvm ls
+   45  nvm use 0.11.14
+   46  nvm ls
+   47  npm test
+   48  npm install koa-router --save
+   49  nvm ls
+   50  node test
+   51  npm test
+   52  mkdir data
+   53  echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+   54  chmod a+x mongod
+   55  npm install monk --save
+   56  git status
+   57  npm install co-monk --save
+   58  mkdir lib
+   59  touch lib/lib.js
+   60  touch lib/db.js
+   61  npm install co --save-dev
+   62  npm test
+   63  npm install co-body --save
+   64  git status
+   65  git add --al
+   66  git add --all
+   67  git commit
+   68  git push origin master
+   69  git remote add origin2 git@github.com:abenedykt/nodeschool-workshop.git
+   70  git pull origin2
+   71  history
+   72  history > bashHistory.txt

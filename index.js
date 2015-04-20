@@ -3,6 +3,7 @@ var app = koa();
 var router = require("koa-router")();
 var db = require("./lib/db");
 var parse = require("co-body");
+var serve = require('koa-static');
 
 function* getDrones(){
     
@@ -31,6 +32,8 @@ function* deleteDrones(){
 router.get('/drones',getDrones);
 router.post('/drones',postDrones);
 router.del('/drones/:id',deleteDrones);
+
+app.use(serve(__dirname + '/public'));
 
 app.use(router.routes());
 app.use(router.allowedMethods());

@@ -102,3 +102,13 @@
   102  git add --all
   103  git commit
   104  history > bashHistory.txt 
+  105  git add --all
+  106  git commit
+  107  git push origin master
+  108  git status
+  109  git checkout test/drones_spec.js
+  110  git checkout index.js
+  111  git status
+  112  git add --all
+  113  git commit
+  114  history > bashHistory.txt 

@@ -20,12 +20,17 @@ function* postDrones(){
     
     this.body = yield db.drones.insert(newDrone);
     this.status = 201;
-    
-    
+}
+
+function* deleteDrones(){
+    var droneId = this.params.id;
+    yield db.drones.remove({_id:droneId})
+    this.status = 200;
 }
 
 router.get('/drones',getDrones);
 router.post('/drones',postDrones);
+router.del('/drones/:id',deleteDrones);
 
 app.use(router.routes());
 app.use(router.allowedMethods());

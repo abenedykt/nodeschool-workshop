@@ -70,7 +70,30 @@ describe('/drones', function(){
                     done();
                 });
         });
-
     });
     
+     describe('delete', function(){
+    
+        var droneId;
+    
+        beforeEach(function(done){
+           co(function*(){
+               yield db.drones.remove({});
+               var drone = yield db.drones.insert(testDrone1);
+               droneId = drone._id;
+           }).then(done,done);
+        });
+        
+        it('removes a drone from db',function(done){
+            request.delete('/drones/' + droneId)
+                .expect(200)
+                .end(function(err, response){
+                    co(function*(){
+                        var drones = yield db.drones.find({});
+                        expect(drones).to.be.length(0);
+                      
+                    }).then(done,done);
+                });
+        });
+    });
 });

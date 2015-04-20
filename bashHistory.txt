@@ -89,3 +89,16 @@
    89  git add --all
    90  git commit
    91  history > bashHistory.txt 
+   92  git add .
+   93  git commit
+   94  clear
+   95  git push origin master
+   96  clear
+   97  mkdir public
+   98  touch public/app.js
+   99  touch public/index.html
+  100  npm install koa-static --save
+  101  git status
+  102  git add --all
+  103  git commit
+  104  history > bashHistory.txt 

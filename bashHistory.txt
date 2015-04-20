@@ -70,3 +70,22 @@
    70  git pull origin2
    71  history
    72  history > bashHistory.txt
+   73  git status
+   74  git add .
+   75  git commit
+   76  git push origin master
+   77  git status
+   78  history > bashHistory.txt
+   79  git log
+   80  git status
+   81  git diff
+   82  clear
+   83  git status
+   84  git reset --hard HEAD
+   85  git status
+   86  clear
+   87  history
+   88  git status
+   89  git add --all
+   90  git commit
+   91  history > bashHistory.txt 

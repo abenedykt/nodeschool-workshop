@@ -72,6 +72,27 @@ describe('/drones', function(){
         });
     });
     
+    describe('posting duplicate drone', function(){
+    
+        beforeEach(function(done){
+           co(function*(){
+               yield db.drones.remove({});
+               yield db.drones.insert(testDrone1);
+           }).then(done,done);
+        });   
+        
+         it('adding second drone with the same name returns status code 422',function(done){
+            request.post('/drones')
+                .send(testDrone1)
+                .expect(422)
+                .end(function(err, response){
+                    var message = response.body.message;
+                    expect(message).to.equal('dron o takiej nazwie juz istnieje');
+                    done();
+                });
+        });
+    });
+    
      describe('delete', function(){
     
         var droneId;

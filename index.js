@@ -19,8 +19,15 @@ function* postDrones(){
         time : droneParams.time
     };
     
-    this.body = yield db.drones.insert(newDrone);
-    this.status = 201;
+    var existing = yield db.drones.find({name: newDrone.name});
+    
+    if(existing.length ==0){
+        this.body = yield db.drones.insert(newDrone);
+        this.status = 201;
+    } else {
+        this.body = {message:'dron o takiej nazwie juz istnieje'};
+        this.status = 422;
+    }
 }
 
 function* deleteDrones(){
